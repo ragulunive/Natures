@@ -16,6 +16,7 @@ const userRouter = require('./routes/userRoutes');
 const reviewRouter = require('./routes/reviewRoutes');
 const bookingRouter = require('./routes/bookingRoutes');
 const viewRouter = require('./routes/viewRoutes');
+const compression = require('compression');
 
 const app = express();
 app.set('view engine', 'pug');
@@ -113,6 +114,8 @@ app.use(
     ],
   })
 );
+
+app.use(compression());
 
 // TEST MIDDLEWARE
 app.use((req, res, next) => {

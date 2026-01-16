@@ -1323,3 +1323,117 @@ body {
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
 }
+
+/* === MOBILE RESPONSIVE FIXES === */
+@media only screen and (max-width: 768px) {
+
+  /* GENERAL */
+  html {
+    font-size: 50%;
+  }
+
+  body {
+    padding: 1rem;
+  }
+
+  .container,
+  .main,
+  .cta,
+  .section-description,
+  .user-view__form-container {
+    padding: 0 2rem;
+    width: 100%;
+  }
+
+  /* HEADER */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 1rem 2rem;
+  }
+  .header__logo {
+    margin-bottom: 1rem;
+  }
+  .nav--tours,
+  .nav--user {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .nav__el:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 0.8rem;
+  }
+  .nav__user-img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+  }
+
+  /* HERO SECTION */
+  .section-header {
+    height: auto;
+    min-height: 30rem;
+  }
+  .heading-box {
+    bottom: auto;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    padding: 1rem;
+  }
+  .heading-primary {
+    font-size: 3rem;
+    width: 100%;
+  }
+  .heading-tertirary {
+    font-size: 1.8rem;
+    position: static;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* SECTION DESCRIPTION */
+  .section-description > * {
+    flex: 0 0 100%;
+    padding: 2rem 0;
+  }
+
+  /* CARDS */
+  .card-container {
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+  }
+  .card__details {
+    grid-template-columns: 1fr;
+  }
+
+  /* CTA */
+  .cta {
+    padding: 5rem 2rem;
+    flex-direction: column;
+  }
+  .cta__img {
+    position: relative;
+    left: auto;
+    top: auto;
+    margin: 0 auto 2rem;
+  }
+
+  /* REVIEWS */
+  .reviews {
+    display: flex;
+    flex-direction: column;
+    overflow-x: visible;
+    gap: 2rem;
+  }
+
+  /* FOOTER */
+  .footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+}
